@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aaditi ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background:
+        radial-gradient(circle at top, #5b1d4d, #211126 45%, #08070d 100%);
+    overflow-x: hidden;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 20px;
+    opacity: 0.7;
+    animation: floatUp linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    width: min(1050px, 100%);
+    text-align: center;
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+}
+
+.badge {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,.25);
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(10px);
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(70px, 13vw, 150px);
+    font-weight: 400;
+    line-height: 1;
+    text-shadow: 0 10px 40px rgba(255,100,190,.35);
+}
+
+.date {
+    margin: 25px 0;
+    font-size: 18px;
+    letter-spacing: 7px;
+    color: #ffd4eb;
+}
+
+.subtitle {
+    max-width: 700px;
+    margin: auto;
+    color: #f1dce9;
+    line-height: 1.9;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 28px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    background: linear-gradient(135deg, #e83e91, #9347d8);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 12px 35px rgba(232,62,145,.35);
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+.scroll {
+    margin-top: 55px;
+    opacity: .6;
+    font-size: 13px;
+}
+
+/* Titles */
+.title {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(50px, 8vw, 85px);
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.lead {
+    max-width: 750px;
+    margin: auto;
+    color: #ead7e5;
+    line-height: 1.9;
+}
+
+/* Wish cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 45px;
+}
+
+.card {
+    padding: 30px 22px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.13);
+    backdrop-filter: blur(15px);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,.11);
+}
+
+.icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #eadbe7;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* Letter */
+.letter {
+    max-width: 850px;
+    margin: 40px auto 0;
+    padding: 40px;
+    text-align: left;
+    border-radius: 28px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.14);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+
+.letter p {
+    color: #f3e4ef;
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+.signature {
+    font-family: 'Great Vibes', cursive;
+    text-align: right;
+    font-size: 38px;
+    margin-top: 25px;
+}
+
+/* Surprise */
+.surprise-box {
+    max-width: 750px;
+    margin: auto;
+    padding: 50px 25px;
+    border-radius: 30px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.15);
+    backdrop-filter: blur(15px);
+}
+
+.hidden {
+    display: none;
+}
+
+.reveal {
+    animation: reveal .8s ease;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.secret-message {
+    margin-top: 35px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.07);
+}
+
+.secret-message p {
+    line-height: 1.9;
+    color: #f4dfea;
+}
+
+/* Final */
+.final h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(70px, 12vw, 130px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.final p {
+    max-width: 700px;
+    margin: 25px auto;
+    color: #ecd9e7;
+    line-height: 1.9;
+}
+
+.from {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px !important;
+}
+
+footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 25px;
+    color: #a996a7;
+    font-size: 12px;
+}
+
+/* Mobile */
+@media(max-width: 750px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .letter {
+        padding: 28px 20px;
+    }
+
+    section {
+        padding: 60px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<script>
+for(let i = 0; i < 35; i++) {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = ["❤️","💗","💕","✨","🌸"][Math.floor(Math.random()*5)];
+
+    heart.style.left = Math.random() * 100 + "%";
+    heart.style.animationDuration = (6 + Math.random()*8) + "s";
+    heart.style.animationDelay = Math.random()*8 + "s";
+    heart.style.fontSize = (12 + Math.random()*20) + "px";
+
+    document.body.appendChild(heart);
+}
+</script>
+
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="container">
+
+    <div class="badge">
+        A LITTLE SURPRISE • JUST FOR YOU ❤️
+    </div>
+
+    <h1>Aaditi Sharma</h1>
+
+    <div class="date">
+        21 • OCTOBER 🎂
+    </div>
+
+    <p class="subtitle">
+        Today isn't just another day...
+        It's the day a beautiful soul came into this world.
+        So I made this little corner of the internet just for you. ✨
+    </p>
+
+    <a href="#wishes" class="btn">
+        Open Your Birthday Surprise 🎁
+    </a>
+
+    <div class="scroll">
+        ↓ Scroll slowly ↓
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- WISHES -->
+<section id="wishes">
+
+<div class="container">
+
+    <div class="title">
+        Birthday Wishes 💕
+    </div>
+
+    <p class="lead">
+        On your special day, I just want to wish you happiness,
+        success, love and countless beautiful moments.
+    </p>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <div class="icon">🌸</div>
+            <h3>Keep Smiling</h3>
+            <p>
+                May your smile always stay this beautiful
+                and may life always give you reasons to smile.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">✨</div>
+            <h3>Keep Shining</h3>
+            <p>
+                May every dream in your heart slowly become
+                a beautiful part of your reality.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">❤️</div>
+            <h3>Stay Happy</h3>
+            <p>
+                May this new chapter bring you peace,
+                success, laughter and unforgettable memories.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- LETTER -->
+<section>
+
+<div class="container">
+
+    <div class="title">
+        A Little Message For You 💌
+    </div>
+
+    <div class="letter">
+
+        <p>Dear Aaditi,</p>
+
+        <p>
+            Happy Birthday to someone who is genuinely
+            very special to me. ❤️
+        </p>
+
+        <p>
+            I may not always have the perfect words to
+            explain what I feel, but I hope you always know
+            that your presence means a lot to me.
+        </p>
+
+        <p>
+            Today, I don't just wish you a Happy Birthday.
+            I wish you a life full of beautiful moments,
+            peaceful days, big achievements and the kind
+            of happiness that stays for a very long time.
+        </p>
+
+        <p>
+            Keep being the wonderful person you are.
+            Never stop dreaming, never stop smiling,
+            and never forget how amazing you are.
+        </p>
+
+        <p>
+            I hope this little surprise makes you smile
+            today... because your smile is worth it. 😊❤️
+        </p>
+
+        <div class="signature">
+            With Love,<br>
+            Priyanshu ❤️
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- SURPRISE -->
+<section>
+
+<div class="container">
+
+    <div class="surprise-box">
+
+        <div class="title">
+            One Last Surprise 🎁
+        </div>
+
+        <p class="lead">
+            There is one more message hidden here...
+            only for you.
+        </p>
+
+        <button class="btn" id="surpriseBtn">
+            Open My Heart ❤️
+        </button>
+
+        <div id="secret" class="hidden">
+
+            <div class="secret-message">
+
+                <div class="title" style="font-size:55px;">
+                    Happy Birthday Aaditi! 🎂
+                </div>
+
+                <p>
+                    You deserve all the beautiful things
+                    life has to offer.
+                </p>
+
+                <p>
+                    May you always be surrounded by people
+                    who appreciate your heart, support your
+                    dreams and make you genuinely happy.
+                </p>
+
+                <p>
+                    And whenever life gets difficult,
+                    remember that somewhere there is someone
+                    wishing the very best for you. ❤️
+                </p>
+
+                <p>
+                    <strong>
+                        Happy Birthday once again, Aaditi! ❤️
+                    </strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- FINAL -->
+<section class="final">
+
+<div class="container">
+
+    <div class="badge">
+        MADE WITH ❤️ FOR AADITI
+    </div>
+
+    <h2>
+        Happy Birthday<br>
+        Aaditi! 🎂❤️
+    </h2>
+
+    <p>
+        Here's to your smile, your dreams,
+        your happiness and all the beautiful
+        memories waiting for you ahead.
+    </p>
+
+    <p class="from">
+        — Priyanshu ❤️
+    </p>
+
+</div>
+
+</section>
+
+<footer>
+    A tiny birthday surprise made especially for Aaditi Sharma ✨
+</footer>
+
+
+<script>
+
+const button = document.getElementById("surpriseBtn");
+const secret = document.getElementById("secret");
+
+button.addEventListener("click", function() {
+
+    secret.classList.remove("hidden");
+    secret.classList.add("reveal");
+
+    button.style.display = "none";
+
+    createExplosion();
+
+});
+
+function createExplosion() {
+
+    const emojis = ["❤️","💖","💕","✨","🌸","🎉","💗"];
+
+    for(let i = 0; i < 45; i++) {
+
+        const element = document.createElement("div");
+
+        element.innerHTML =
+            emojis[Math.floor(Math.random()*emojis.length)];
+
+        element.style.position = "fixed";
+        element.style.left = "50%";
+        element.style.top = "50%";
+        element.style.zIndex = "999";
+        element.style.pointerEvents = "none";
+        element.style.fontSize =
+            (15 + Math.random()*25) + "px";
+
+        document.body.appendChild(element);
+
+        const x = (Math.random()*2-1)*450;
+        const y = (Math.random()*2-1)*400;
+
+        element.animate(
+            [
+                {
+                    transform: "translate(-50%,-50%) scale(.5)",
+                    opacity: 1
+                },
+                {
+                    transform:
+                    `translate(calc(-50% + ${x}px),
+                    calc(-50% + ${y}px)) scale(1.4)`,
+                    opacity: 0
+                }
+            ],
+            {
+                duration: 1300,
+                easing: "cubic-bezier(.2,.8,.3,1)"
+            }
+        );
+
+        setTimeout(() => {
+            element.remove();
+        }, 1300);
+    }
+}
+
+</script>
+
+</body>
+</html>
